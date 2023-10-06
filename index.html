@@ -11,6 +11,9 @@
 
     <title>CV - Jesús Eduardo Quintero Gómez</title>
 
+    <link href="css/carousel-style.css" rel="stylesheet">
+    
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -67,11 +70,11 @@
 
     <!-- Header -->
     <a name="about"></a>
-    <div class="intro-header">
+    <div class="intro-header" id="carousel">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-12">
+
                     <div class="intro-message">
                         <h1>Jesús Eduardo Quintero Gómez</h1>
                         <h3>CV</h3>
@@ -87,16 +90,32 @@
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                             </li>
                         </ul>
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <button class="btn btn-default" id="retroceder">Retroceder</button>
+                                <button class="btn btn-default" id="avanzar">Avanzar</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+                
+            
 
         </div>
-        <!-- /.container -->
 
     </div>
     <!-- /.intro-header -->
 
+    <div class="carousel">
+        <button id="retroceder">Retroceder</button>
+        <div id="imagen"></div>
+        <button id="avanzar">Avanzar</button>
+    </div>
+    <div class="controles">
+        <button id="play">Play</button>
+        <button id="stop" disabled>Stop</button>
+    </div>
     <!-- Page Content -->
 
 	<a  name="services"></a>
@@ -259,6 +278,10 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
+
+
+    <script src="carousel.js">    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
