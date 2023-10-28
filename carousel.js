@@ -6,13 +6,12 @@ window.onload = function () {
         'img/lenguajes.jpg'
     ];
 
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
     let posicionActual = 0;
-
-    //let $img = document.querySelector('#carousel');
     
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
+    
     let $imagen = document.querySelector('#imagen');
     let $botonPlay = document.querySelector('#play');
     let $botonStop = document.querySelector('#stop');
@@ -21,6 +20,7 @@ window.onload = function () {
     // Funciones
 
     function pasarFoto() {
+        console.log('avanzar');
         if(posicionActual >= IMAGENES.length - 1) {
             posicionActual = 0;
         } else {
@@ -45,7 +45,6 @@ window.onload = function () {
      * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
      */
     function renderizarImagen () {
-        console.log("Si entra");
         $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
         //$img.style.background = `url(${IMAGENES[posicionActual]})`;
     }
